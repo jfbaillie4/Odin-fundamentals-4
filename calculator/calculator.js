@@ -1,26 +1,31 @@
-function add () {
-	
+function add (value1, value2) {
+	return value1 + value2;
 }
 
-function subtract () {
-	
+function subtract (value1, value2) {
+	return value1 - value2;
 }
 
-function sum () {
-	
+function sum (array) {
+	return array.reduce((total, value) => total + value, 0);
 }
 
-function multiply () {
-	
+function multiply (array) {
+	return (array.length > 1 ? array.reduce((total, value) => total * value) : "Requires array.length > 2");
+	//return array.reduce((total, value) => total * value);
 }
 
-function power() {
-	
+function power(number, power) {
+	return number ** power;
 }
 
-function factorial() {
-	
-}
+function factorial(value) {
+	array = [];
+	for (value; value>0; value--) {
+		array.push(value);
+	};
+	return array.reduce((total,value) => total*value, 1);
+};
 
 module.exports = {
 	add,
